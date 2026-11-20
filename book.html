@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+ <head>
+  <meta charset="utf-8"/>
+  <meta content="width=device-width,initial-scale=1" name="viewport"/>
+  <title>
+   Book a Repair | FlatFix
+  </title>
+  <meta content="Request a fixed-price quote for your student house repair and invite housemates to share the cost." name="description"/>
+  <link href="style.css" rel="stylesheet"/>
+ </head>
+ <body>
+  <nav>
+   <a class="logo" href="index.html">
+    FlatFix
+   </a>
+   <a class="l" href="index.html">
+    Home
+   </a>
+   <a class="l on" href="book.html">
+    Book a Repair
+   </a>
+   <a class="l" href="dashboard.html">
+    Dashboard
+   </a>
+   <a class="l" href="portal.html">
+    Trade Portal
+   </a>
+   <a class="l" href="help.html">
+    Help &amp; Contact
+   </a>
+   <a class="btn s" href="help.html">
+    Log in
+   </a>
+  </nav>
+  <div class="sec">
+   <h1 style="font-size:32px">
+    Book your repair
+   </h1>
+   <p>
+    Tell us what needs fixing and receive a clear, fixed-price quote.
+   </p>
+   <div class="two">
+    <div class="card">
+     <label>
+      Repair category
+     </label>
+     <select id="cat">
+      <option value="65">
+       Plumbing
+      </option>
+      <option value="70">
+       Electrical
+      </option>
+      <option value="55">
+       Locks
+      </option>
+      <option value="45">
+       General repairs
+      </option>
+     </select>
+     <label>
+      Repair title
+     </label>
+     <input placeholder="e.g. Leaking kitchen tap"/>
+     <label>
+      Describe the problem
+     </label>
+     <textarea rows="4"></textarea>
+     <label>
+      Upload photos of the problem
+     </label>
+     <input type="file"/>
+     <label>
+      Property postcode
+     </label>
+     <input placeholder="LE1 7RH"/>
+     <label>
+      Preferred date
+     </label>
+     <input type="date"/>
+     <label>
+      Time slot
+     </label>
+     <select>
+      <option>
+       Morning (8-12)
+      </option>
+      <option>
+       Afternoon (12-5)
+      </option>
+     </select>
+     <p>
+      <a class="btn" href="#">
+       Request fixed quote
+      </a>
+      <a class="btn s" href="#">
+       Save draft
+      </a>
+     </p>
+    </div>
+    <div>
+     <div class="card">
+      <h3>
+       Quote summary
+      </h3>
+      <table>
+       <tr>
+        <td>
+         Estimated price
+        </td>
+        <td id="est">
+         £65.00
+        </td>
+       </tr>
+       <tr>
+        <td>
+         Service fee (12%)
+        </td>
+        <td id="fee">
+         £7.80
+        </td>
+       </tr>
+       <tr>
+        <th>
+         Total
+        </th>
+        <th id="tot">
+         £72.80
+        </th>
+       </tr>
+      </table>
+      <p class="note">
+       Illustrative figures only.
+      </p>
+     </div>
+     <div class="card" style="margin-top:18px">
+      <h3>
+       Split with housemates
+      </h3>
+      <label>
+       Number of housemates
+      </label>
+      <select id="n">
+       <option>
+        2
+       </option>
+       <option>
+        3
+       </option>
+       <option selected="">
+        4
+       </option>
+       <option>
+        5
+       </option>
+      </select>
+      <p class="big" id="each">
+       £18.20 each
+      </p>
+      <a class="btn s" href="#">
+       Invite housemates
+      </a>
+     </div>
+    </div>
+   </div>
+  </div>
+  <script>
+   function u(){var e=+document.getElementById('cat').value,f=e*.12,t=e+f,n=+document.getElementById('n').value;est.textContent='£'+e.toFixed(2);fee.textContent='£'+f.toFixed(2);tot.textContent='£'+t.toFixed(2);each.textContent='£'+(t/n).toFixed(2)+' each'}cat.onchange=n.onchange=u
+  </script>
+  <footer>
+   <span>
+    © 2026 FlatFix (prototype)
+   </span>
+   <a href="help.html">
+    Help &amp; Contact
+   </a>
+   <a href="help.html#privacy">
+    Privacy Policy
+   </a>
+   <a href="help.html">
+    Terms
+   </a>
+  </footer>
+ </body>
+</html>
